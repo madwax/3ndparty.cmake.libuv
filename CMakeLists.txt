@@ -105,8 +105,15 @@ else()
 	list( APPEND libuv_DEFINES_PRIVATE 
 		"-D_LARGEFILE_SOURCE"
 		"-D_FILE_OFFSET_BITS=64"
+	)
+		
+	list( APPEND libuv_COMPILE_FLAGS_PRIVATE 	
 		"-std=gnu89"  
 		"-fvisibility=hidden"
+		"-g"
+		"-Wall"
+		"-Wno-unused-parameter"
+		"-Wstrict-prototypes"
 	)
 
 	list( APPEND libuv_LINK 
